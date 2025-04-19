@@ -53,7 +53,7 @@ const addWinner = (winner) =>{
     msgBox.classList.remove("hide");
     disabledboxs();
 }
-// disanbbeling buttons
+// disabeling buttons
 const disabledboxs =()=>{
     for(let box of boxs){
         box.disabled = true;
@@ -66,22 +66,13 @@ const enabledboxs = ()=>{
         box.innerText ="";
     }
 }
-//funstion for restarting game
+//function for restarting game
 const playAgain = ()=>{
     turnO = true ;
     count = 0 ;
     enabledboxs();
     msgBox.classList.add("hide") ;
 }
-
-//on clicking new game button
-newGame.addEventListener("click",()=>{
-    playAgain();
-});
-//on clicking reset button
-resetBtn.addEventListener("click",()=>{
-    playAgain();
-});
 
 //checking the winner of game
 const checkWinner = () =>{
@@ -97,3 +88,11 @@ const checkWinner = () =>{
         }
     }
 }
+//on clicking new game button
+newGame.addEventListener("click",()=>{
+    playAgain();
+});
+//on clicking reset button
+resetBtn.addEventListener("click",()=>{
+    playAgain();
+});
